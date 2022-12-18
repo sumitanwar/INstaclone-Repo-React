@@ -1,0 +1,295 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.maincontainer {
+  margin: auto;
+  width: 400px;
+}
+.fa-camera {
+  font-size: 50px;
+  color: rgb(253, 253, 253);
+  margin: 0px 30px;
+}
+.fa-camera:hover {
+  color: rgb(193, 187, 187);
+  margin: 0px 30px;
+}
+.fa-instagram {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  /* Also define standard property for compatibility */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 60px; /* change this to change the size*/
+  margin: 0px 30px;
+  font-weight: bold;
+}
+/* .Background_form {
+  display: inline-block;
+  width: 100%;
+  background-color: rgb(70, 70, 70);
+  height: 100%;
+} */
+.Background_postView {
+  display: inline-block;
+  width: 100%;
+  background-color: rgb(70, 70, 70);
+  height: 100%;
+}
+.navbar {
+  position: sticky;
+  top: 1px;
+  display: inline-block;
+  width: 100%;
+  height: 120%;
+  z-index: 2;
+}
+
+.navbar-brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: lighter;
+  font-size: 40px;
+  color: rgb(254, 254, 254);
+  font-family: "Lobster", cursive;
+  margin: auto 10px;
+  height: 80px;
+}
+.navbar-brand:hover {
+  color: rgb(254, 254, 254);
+}
+.container-fluid {
+  background-color: var(--bs-gray-800);
+  height: 120%;
+  width: 100%;
+}
+
+.card {
+  margin: 10px auto;
+  padding: 0px;
+  height: 460px;
+  width: 600px;
+
+  background-color: rgb(255, 255, 255);
+}
+.heading_container {
+  display: inline-flex;
+}
+.city_and_user_name_container {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  /* border: 0.5px solid black; */
+  height: 50px;
+  justify-content: center;
+  margin: 0px 150px 0px 0px;
+}
+.user_name {
+  margin: 0px 8px;
+  font-weight: bold;
+}
+.location {
+  margin: 0px 8px;
+  color: gray;
+}
+.dots_container {
+  display: inline-flex;
+  width: 35%;
+  /* border: 0.5px solid black; */
+  justify-content: end;
+  align-items: center;
+}
+.dots_container p {
+  position: relative;
+  right: 10px;
+  font-weight: bold;
+}
+.image_container {
+  width: 100%;
+  /* border: 0.5px solid red; */
+  height: 300px;
+}
+.image_container img {
+  width: 100%;
+  height: 100%;
+}
+.icon_container {
+  margin: auto 15px;
+  position: relative;
+  top: 4px;
+}
+.fa-heart {
+  margin: 0px 15px 0px 0px;
+}
+.fa-rocket {
+  font-size: 17px;
+  color: rgb(74, 79, 75);
+}
+.date_Container {
+  text-align: end;
+  margin: 3px 5px;
+}
+.date_Container p {
+  font-size: 15px;
+  margin: auto;
+}
+.likes_Counter {
+  margin: 0px 15px;
+  position: relative;
+  top: 5px;
+}
+.likes_Counter p {
+  margin: auto;
+  color: gray;
+}
+.description_container {
+  margin: 0px 15px;
+  font-weight: bold;
+}
+.description_container p {
+  margin: 10px 0px;
+}
+
+.landing_main_container {
+  display: inline-flex;
+  padding: 0px;
+  width: 1520px;
+  height: 650px;
+  align-items: center;
+  margin: auto;
+  padding: 5px;
+}
+.landing_img_container {
+  display: inline-flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+.landing_img_container img {
+  width: 100%;
+  height: 100%;
+}
+.landing_button_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin: 3px;
+}
+.landing_button_container p {
+  font-family: "Reggae One", cursive;
+  color: green;
+  font-weight: bold;
+  font-size: 50px;
+}
+.landing_button_container button {
+  display: flex;
+  width: 150px;
+  height: 80px;
+  border-radius: 20px;
+  background-color: white;
+  border: 2px solid green;
+  justify-content: center;
+  align-items: center;
+}
+.landing_button_container a {
+  text-decoration: none;
+  font-size: 45px;
+  color: Green;
+}
+.form_container {
+  border: 2px solid black;
+  margin: auto;
+  width: 600px;
+  padding: 5px;
+}
+.input-group {
+  margin: 5px auto;
+  width: 550px;
+}
+.Author_location {
+  display: inline-block;
+  width: 100%;
+  margin: 20px auto 5px;
+}
+#location {
+  margin: 0px 20px 0px 26px;
+  width: 250px;
+  border-radius: 5px;
+  height: 35px;
+}
+#Author {
+  margin: 0px 20px 0px 20px;
+  width: 250px;
+  border-radius: 5px;
+  height: 35px;
+}
+.textarea {
+  display: flex;
+  margin: 30px auto 5px;
+  width: 550px;
+  height: 36px;
+  border-radius: 5px;
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: Black;
+  color: white;
+  border-radius: 5px;
+  width: 100px;
+  height: 40px;
+  font-size: 25px;
+  margin: 5px auto;
+  font-weight: bold;
+}
+.button:hover {
+  background-color: rgb(250, 109, 109);
+  border: 2px solid rgb(250, 109, 109);
+  color: rgb(0, 0, 0);
+}
