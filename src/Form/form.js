@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import loader from "../imgs/128x128.gif";
 import { Link } from "react-router-dom";
 
 import axios from "axios";
 export default function Form() {
+    const [loaderflag, setLoaderflag] = useState(false);
   let reset;
   let url = "https://instaclone-apii.onrender.com/user/api/v1/posts";
   const [data, setData] = useState({
@@ -20,7 +22,7 @@ export default function Form() {
 
   async function Submit(e) {
     e.preventDefault();
-
+setLoaderflag(true);
     let formData = new FormData();
     if (data.image && data.Author) {
       formData.append("image", data.image);
@@ -28,16 +30,19 @@ export default function Form() {
       formData.append("Description", data.Description);
       formData.append("Location", data.Location);
     } else {
-      return toast.error("Image or Author Field is Empty!!");
+      setLoaderflag(false);
+      return toast.error("Image or Author Field is Empty!!");     
     }
     try {
       if (formData) {
         const response = await axios.post(url, formData);
+        setLoaderflag(false);
         if (response.status === 200) {
           toast.success("Posted Successfully");
         }
       }
     } catch (e) {
+      setLoaderflag(false);
       toast.error(e.message);
     }
     // console.log(formData);
@@ -125,6 +130,9 @@ export default function Form() {
           </button>
         </form>
       </div>
-    </>
+        <div className="loader">
+        {loaderflag ? <img src={loader} alt="" /> : ""}
+      </div>
+     </>
   );
 }
