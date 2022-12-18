@@ -293,3 +293,14 @@
   border: 2px solid rgb(250, 109, 109);
   color: rgb(0, 0, 0);
 }
+.loader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+}
+.loader img {
+  width: 125px;
+  height: 125px;
+}
+
