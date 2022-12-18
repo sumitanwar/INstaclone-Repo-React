@@ -1,20 +1,25 @@
 import React from "react";
 import axios from "axios";
+import loader from "../imgs/128x128.gif";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 export default function Postview() {
+   const [loaderflag, setLoaderflag] = useState(false);
   const [Data, setData] = useState();
   const routes = [{ key: "Camera", route: "/form" }];
   useEffect(() => {
+    setLoaderflag(true);
     axios
       .get("https://instaclone-apii.onrender.com/user/api/v1/posts")
       .then((res) => {
+       setLoaderflag(false);
         // console.log(res);
         if (res.data.Result !== undefined) {
           setData(res.data.Result.reverse());
         }
       })
       .catch((e) => {
+      setLoaderflag(false);
         return e;
       });
   }, []);
@@ -71,6 +76,9 @@ export default function Postview() {
               })
             : ""}
         </div>
+      </div>
+      <div className="loader">
+        {loaderflag ? <img src={loader} alt="" /> : ""}
       </div>
     </>
   );
