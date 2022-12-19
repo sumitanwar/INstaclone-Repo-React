@@ -40,7 +40,10 @@ setLoaderflag(true);
         if (response.status === 200) {
           toast.success("Posted Successfully");
           setLoaderflag(false);
-          postRedirect(routes[1].route);
+          setTimeout(() => {
+            postRedirect(routes[1].route);
+          }, 2500);
+        }
         }
       }
     } catch (e) {
