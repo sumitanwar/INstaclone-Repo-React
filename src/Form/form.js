@@ -44,7 +44,6 @@ setLoaderflag(true);
             postRedirect(routes[1].route);
           }, 2500);
         }
-        }
       }
     } catch (e) {
       setLoaderflag(false);
