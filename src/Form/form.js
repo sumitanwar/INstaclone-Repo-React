@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import loader from "../imgs/128x128.gif";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 import axios from "axios";
 export default function Form() {
     const [loaderflag, setLoaderflag] = useState(false);
+    const postRedirect=useNavigate();
   let reset;
   let url = "https://instaclone-apii.onrender.com/user/api/v1/posts";
   const [data, setData] = useState({
@@ -36,9 +37,10 @@ setLoaderflag(true);
     try {
       if (formData) {
         const response = await axios.post(url, formData);
-        setLoaderflag(false);
         if (response.status === 200) {
           toast.success("Posted Successfully");
+          setLoaderflag(false);
+          postRedirect(routes[1].route);
         }
       }
     } catch (e) {
